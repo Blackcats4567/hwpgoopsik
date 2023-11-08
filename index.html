@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>HWP</title>
+    <title>급식 데이터 자동 한글 변환기</title>
     <script>
         function saveTextAsFile() {
 // 급식 정보
@@ -41,6 +41,11 @@ for (let i = 0; i < mealInfoLines.length; i++) {
   if (line.includes('석식')) {
     isBreakfast = false;
     result.push(`
+      <P ParaShape="20" Style="0">
+        <TEXT CharShape="9">
+          <CHAR></CHAR>
+        </TEXT>
+      </P>
       <P ParaShape="20" Style="0">
         <TEXT CharShape="8">
           <CHAR>&lt;저녁&gt;</CHAR>
@@ -84,5 +89,37 @@ const hwpdata = result.join('\n');
   <textarea id="textArea">
   </textarea>
   <a onclick='saveTextAsFile()'>급식 파일 생성</a>
+  <br>
+  <br>
+  <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=blBI&pkid=682&os=24931352&qvt=0&query=%EC%83%81%EC%A3%BC%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EA%B8%89%EC%8B%9D%EC%8B%9D%EB%8B%A8">급식 정보 가져오는 곳</a>
+  <p><b>글자 형식은 다음과 같아야 함.</b><br><br>11.6.월 조식<br>
+    어묵탕,유부보쌈<br>
+    (1.5.6.10.16)<br>
+    숙주나물<br>
+    갈비양념구이<br>
+    (5.6.10)<br>
+    배추김치<br>
+    다크초코 마카다미아<br>
+    11.6.월 중식<br>
+    친환경쌀밥<br>
+    된장찌개<br>
+    (5.6)<br>
+    양배추,케일숙쌈<br>
+    한우당면불고기<br>
+    (5.6.16)<br>
+    김치전<br>
+    (1.5.6.9)<br>
+    깍두기<br>
+    11.6.월 석식<br>
+    친환경현미밥<br>
+    북어콩나물국<br>
+    고추장불고기<br>
+    (5.6.9.10)<br>
+    떡꼬치구이<br>
+    (2.5.6.10.12.13.15.16)<br>
+    깍두기<br>
+    알배추<br>
+    베이컨감자채볶음<br>
+    (5.10)</p>
   </body>
   </html>
