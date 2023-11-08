@@ -334,7 +334,8 @@
             </PAGEBORDERFILL>
           </SECDEF>
           <COLDEF Type="Newspaper" Count="1" Layout="Left" SameSize="true" SameGap="0"/>
-          <CHAR>$날짜$</CHAR>
+          <CHAR>급식 한글 자동화 시스템</CHAR>
+          <CHAR>이정윤</CHAR>
         </TEXT>
       </P>
       <P ParaShape="20" Style="0" PageBreak="true" ColumnBreak="false">
